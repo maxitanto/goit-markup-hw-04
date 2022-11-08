@@ -11,6 +11,7 @@
 	--header-border-color: #ECECEC;
 	--works-card-set-border: #EEEEEE;
 	--primary-icon-color: #AFB1B8;
+	--bg-gradient-color: rgba(47, 48, 58, 0.4);
 }
 
 h1, 
@@ -82,7 +83,9 @@ body {
 .footer-contacts-text:hover,
 .footer-contacts-text:focus,
 .header-contacts-icon:hover,
-.header-contacts-icon:focus {
+.header-contacts-icon:focus,
+.clients-list-link:hover,
+.clients-list-link:focus {
 	color: var(--accent-color);
 }
 
@@ -134,16 +137,23 @@ body {
 .btn-filter {
 	background-color: var(--bcg-section-btn-color);
 }
+
+.feature-list,
+.team-list {
+	display: flex;
+	margin-left: -30px;
+}
+
+.header-flex,
+.product-list {
+	display: flex;
+	justify-content: space-between;
+}
 /* ==========END COMPONENTS========== */
 
 /* ==========START HEADER========== */
 .header {
 	border-bottom: 1px solid var(--header-border-color);
-}
-
-.header-flex {
-	display: flex;
-	justify-content: space-between;
 }
 
 .nav-page {
@@ -168,7 +178,8 @@ body {
 	letter-spacing: 0.02em;
 }
 
-.navigation .item:not(:last-child) {
+.navigation .item:not(:last-child),
+.header-contacts .item:not(:last-child) {
 	margin-right: 50px;
 }
 
@@ -178,10 +189,6 @@ body {
 	padding-bottom: 32px;
 
 	color: var(--primary-text-color);
-}
-
-.header-contacts .item:not(:last-child) {
-	margin-right: 50px;
 }
 
 .header-contacts-link {
@@ -206,8 +213,8 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	background-image: linear-gradient(to right,
-			rgba(47, 48, 58, 0.4),
-			rgba(47, 48, 58, 0.4)
+			var(--bg-gradient-color),
+			var(--bg-gradient-color)
 		),
 	url(../images/hero-img.jpg);
 	background-size: cover;
@@ -251,11 +258,6 @@ body {
 /* ==========END HERO========== */
 
 /* ==========START FEATURE========== */
-.feature-list {
-	display: flex;
-	margin-left: -30px;
-}
-
 .feature-item {
 	margin-left: 30px;
 	flex-basis: calc(100% / 4 - 30px);
@@ -277,26 +279,16 @@ body {
 .products {
 	padding-top: 0px;
 }
-
-.product-list {
-	display: flex;
-	justify-content: space-between;
-}
 /* ==========END PRODUCTS========== */
 
 /* ==========START TEAM========== */
-.team-list {
-	display: flex;
-	margin-left: -30px;
-}
-
 .team-list-item {
 	margin-left: 30px;
 	flex-basis: calc((100% - 120px) / 4);
 
+	border-radius: 0px 0px 4px 4px;
 	background-color: var(--secondary-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 0px 0px 4px 4px;
 }
 
 .team-content-wrapper {
@@ -312,12 +304,12 @@ body {
 }
 
 .employee-profession {
+	margin-bottom: 16px;
 	text-align: center;
 
-	color: var(--secondary-text-color);
 	font-size: 16px;
 	line-height: 1.19;
-	margin-bottom: 16px;
+	color: var(--secondary-text-color);
 }
 
 .social-list,
@@ -331,6 +323,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
@@ -360,13 +353,13 @@ body {
 	align-items: center;
 	height: 100%;
 	padding: 16px 32px;
+	
 	border: 1px solid var(--primary-icon-color);
 	color: var(--primary-icon-color);
 }
 
 .clients-list-link:hover,
 .clients-list-link:focus {
-	color: var(--accent-color);
 	border-color: var(--accent-color);
 }
 /* ==========END CLIENTS========== */
@@ -395,7 +388,8 @@ body {
 	font-style: normal;
 }
 
-.contacts-list {
+.contacts-list,
+.contacts-list-tel {
 	margin-top: 9px;
 }
 
@@ -407,10 +401,6 @@ body {
 
 .footer-contacts-text {
 	color: var(--footer-contacts-text-color);
-}
-
-.contacts-list-tel {
-	margin-top: 9px;
 }
 
 .footer-social-title {
@@ -487,9 +477,9 @@ body {
 }
 
 .works-text {
-	color: var(--secondary-text-color);
 	font-size: 16px;
 	line-height: 1.88;
+	color: var(--secondary-text-color);
 }
 
 .works-list .link:hover,
