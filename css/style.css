@@ -319,13 +319,18 @@ body {
 	align-items: center;
 }
 
+.social-list-item {
+		width: 44px;
+		height: 44px;
+}
+
 .social-list-link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	width: 44px;
-	height: 44px;
+	width: 100%;
+	height: 100%;
 	border-radius: 50%;
 	color: var(--primary-icon-color);
 }
@@ -351,6 +356,7 @@ body {
 .clients-list-link {
 	display: flex;
 	align-items: center;
+	width: 100%;
 	height: 100%;
 	padding: 16px 32px;
 	
@@ -378,7 +384,8 @@ body {
 	margin-left: 70px;
 }
 
-.logo-footer {
+.logo-footer,
+.footer-social-title {
 	color: var(--secondary-color);
 }
 
@@ -403,16 +410,12 @@ body {
 	color: var(--footer-contacts-text-color);
 }
 
-.footer-social-title {
-	margin-bottom: 20px;
-	color: var(--secondary-color);
-}
-
 .footer-icon {
 	fill:var(--secondary-color);
 }
 .footer-social-list {
 	min-width: 206px;
+	margin-top: 20px;
 }
 
 .footer-social-link {
